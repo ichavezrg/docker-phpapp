@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web-server:
+    build: .
+    container_name: 'web-server'
+    ports:
+      - "8080:80"
+    environment:
+      - TZ=America/Mexico_city

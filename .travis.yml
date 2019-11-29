@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t ichavez9001/docker-phpapp -f Dockerfile .
+
+script:
+  - docker run ichavez9001/docker-phpapp php test.php
